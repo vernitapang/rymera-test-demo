@@ -19,3 +19,7 @@ Then("I should see the product {int} regular price must be strikethrough", (prod
     cy.get(`.post-${productId} > .wp-block-woocommerce-product-price > .wc-block-components-product-price > del`)
         .should('have.css', 'text-decoration-line', 'line-through');
 })
+
+Then("I should see the product name {string}", (productName) => {
+    cy.get('[data-block-name="woocommerce/product-collection"]').contains(productName).should('have.text', productName);
+});
