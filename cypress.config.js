@@ -13,5 +13,6 @@ module.exports = defineConfig({
       return config;
     },
     specPattern: 'cypress/e2e/features/**/*.feature',
+    baseUrl: 'http://localhost:8000/'
   },
 });
